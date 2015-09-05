@@ -1,0 +1,11 @@
+ static void Main(string[] words)
+        {
+            foreach (var word in words)
+            {
+                if (String.Concat(word.ToCharArray().OrderByDescending(c => c)) == word)
+                    Console.WriteLine(word + " REVERSE ORDER");
+                else
+                    Console.WriteLine(word + (String.Concat(word.ToCharArray().OrderBy(c => c)) == word ? " IN ORDER" : " NOT IN ORDER"));
+            }
+            Console.ReadLine();
+        }
