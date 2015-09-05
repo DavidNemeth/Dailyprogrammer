@@ -1,0 +1,5 @@
+function order(input) {
+    var sort = input.split('').sort();
+    var status = (sort.join('') === input) ? 'IN' : (sort.reverse().join('') === input) ? 'IN REVERSE' : 'NOT IN';
+    return [input, status, 'ORDER'].join(' ');
+}
