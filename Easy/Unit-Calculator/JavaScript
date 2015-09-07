@@ -1,0 +1,105 @@
+function convert(amt, from, to) {
+    var converted;
+    if (from == to) {
+        alert("You already have " + from + "!");
+    }
+    switch (from) {
+        case "metres":
+            if (to == "inches") {
+                converted = amt * 39.3701 + " inches";
+            } else if (to == "miles") {
+                converted = amt * 0.000621371 + " miles";
+            } else if (to == "attoparsecs") {
+                converted = amt * 32.4077929 + " attoParsecs";
+            } else {
+                console.log(from + " can not be converted to " + to);
+                return false;
+            }
+            break;
+        case "inches":
+            if (to == "metres") {
+                converted = amt * 0.0254 + " metres";
+            } else if (to == "miles") {
+                converted = amt * 0.0000157828 + " miles";
+            } else if (to == "attoparsecs") {
+                converted = amt * 0.82315794 + " attoParsecs";
+            } else {
+                console.log(from + " can not be converted to " + to);
+                return false;
+            }
+            break;
+        case "miles":
+            if (to == "metres") {
+                converted = amt * 1609.34 + " metres";
+            } else if (to == "inches") {
+                converted = amt * 63360 + " inches";
+            } else if (to == "attoparsecs") {
+                converted = amt * 52155.287 + " attoParsecs";
+            } else {
+                console.log(from + " can not be converted to " + to);
+                return false;
+            }
+            break;
+        case "attoparsecs":
+            if (to == "metres") {
+                converted = amt * 0.0308567758 + " metres";
+            } else if (to == "inches") {
+                converted = amt * 1.21483369 + " inches";
+            } else if (to == "miles") {
+                converted = amt * 0.00001917351 + " miles";
+            } else {
+                console.log(from + " can not be converted to " + to);
+                return false;
+            }
+            break;
+        case "kilograms":
+            if (to == "pounds") {
+                converted = amt * 2.20462 + " pounds";
+            } else if (to == "ounces") {
+                converted = amt * 35.274 + " ounces";
+            } else if (to == "hogsheads of beryllium") {
+                converted = amt / 440.7 + " hhd of berylliums";
+            } else {
+                console.log(from + " can not be converted to " + to);
+                return false;
+            }
+            break;
+        case "pounds":
+            if (to == "kilograms") {
+                converted = amt * 0.453592 + " kilograms";
+            } else if (to == "ounces") {
+                converted = amt * 16 + " ounces";
+            } else if (to == "hogsheads of beryllium") {
+                converted = amt / 971.6 + " hhd of beryllium";
+            } else {
+                console.log(from + " can not be converted to " + to);
+                return false;
+            }
+            break;
+        case "ounces":
+            if (to == "kilograms") {
+                converted = amt * 0.0283495 + " kilograms";
+            } else if (to == "pounds") {
+                converted = amt / 16 + " pounds";
+            } else if (to == "hogshead of beryllium") {
+                converted = amt / 15545.6 + " hhd of beryllium";
+            } else {
+                console.log(from + " can not be converted to " + to);
+                return false;
+            }
+            break;
+        case "hogsheads of beryllium":
+            if (to == "kilograms") {
+                converted = amt * 440.7 + " kilograms";
+            } else if (to == "pounds") {
+                converted = amt * 971.6 + " pounds";
+            } else if (to == "ounces") {
+                converted = amt * 15545.6 + " ounces";
+            } else {
+                console.log(from + " can not be converted to " + to);
+                return false;
+            }
+            break;
+    }
+    return converted;
+}
